@@ -72,7 +72,25 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+    background-image: url('../app/public/images/trees2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
+
+    /* For the border effect around the viewport*/
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 20px solid rgba(141, 141, 141, 0.455);
+      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+      pointer-events: none;
+    }
 }
