@@ -12,6 +12,17 @@ body {
   }
 }
 
+*,
+*:before,
+*:after {
+  @apply cursor-default;
+}
+
+a,
+button {
+  @apply cursor-pointer;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -93,4 +104,9 @@ body {
       box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
       pointer-events: none;
     }
+
+    .dark * {
+      cursor: url(public/images/icons8-select-30-white.png), default;
+    }
+
 }

@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		cursor: {
+			default: 'url(public/images/icons8-select-30-black.png), default',
+			dark: 'url(public/images/icons8-select-30-white.png), default',
+			pointer: 'url(public/images/icons8-select-30-blue.png), pointer',
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
