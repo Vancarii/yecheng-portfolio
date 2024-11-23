@@ -27,6 +27,7 @@ button {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
+    --menu-background: 180, 47%, 22%, 0.5;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
@@ -54,6 +55,7 @@ button {
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
+    --menu-background: 182, 100%, 11%, 0.5;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
@@ -86,27 +88,26 @@ button {
 
   body {
     @apply bg-background text-foreground;
-    background-image: url('../app/public/images/trees2.jpg');
+    background-image: url("../app/public/images/trees2.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
 
-    /* For the border effect around the viewport*/
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border: 20px solid rgba(141, 141, 141, 0.455);
-      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
-      pointer-events: none;
-    }
+  /* For the border effect around the viewport*/
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px solid rgba(141, 141, 141, 0.455);
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+  }
 
-    .dark * {
-      cursor: url(public/images/icons8-select-30-white.png), default;
-    }
-
+  .dark * {
+    cursor: url(public/images/icons8-select-30-white.png), default;
+  }
 }
