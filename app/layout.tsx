@@ -4,8 +4,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
-
-import Navbar from "./components/navbar";
+import Navbar from "@/components/navbar";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -29,11 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">    
-    
-      <body
-        className={`antialiased`}
-      >
+    <html lang="en">
+      <body className={`antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -41,8 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-        <main>{children}</main>
-      
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
