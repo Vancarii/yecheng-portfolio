@@ -107,6 +107,10 @@ button {
     pointer-events: none;
   }
 
+  .mt-35vh {
+    margin-top: 35vh;
+  }
+
   .dark * {
     cursor: url(public/images/icons8-select-30-white.png), default;
   }
