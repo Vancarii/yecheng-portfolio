@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import Navbar from "@/components/navbar";
+import Bottombar from "@/components/bottombar";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -37,8 +38,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
+          <Bottombar />
           <main>{children}</main>
         </ThemeProvider>
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   );

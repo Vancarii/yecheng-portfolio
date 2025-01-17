@@ -88,7 +88,7 @@ button {
 
   body {
     @apply bg-background text-foreground;
-    background-image: url("../app/public/images/trees2.jpg");
+    background-image: url("../public/images/trees2.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -112,6 +112,6 @@ button {
   }
 
   .dark * {
-    cursor: url(public/images/icons8-select-30-white.png), default;
+    cursor: url(/images/icons8-select-30-white.png), default;
   }
 }

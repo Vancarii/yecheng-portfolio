@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { LayoutGrid } from "lucide-react";
+import { LayoutGrid, X } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 
@@ -12,6 +12,20 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        toggleMenu();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
@@ -32,7 +46,15 @@ const Navbar: React.FC = () => {
           isOpen ? "opacity-100" : "opacity-0"
         } ${isOpen ? "pointer-events-auto" : "pointer-events-none"}`}
       >
-        <div className="flex justify-center items-center">
+        <div className="relative flex justify-center items-center w-full h-full">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleMenu}
+            className="absolute top-8 left-8 p-4 bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-lg"
+          >
+            <X />
+          </Button>
           <ul className="flex flex-col items-center space-y-6">
             <li>
               <Link href="/pages/landing">

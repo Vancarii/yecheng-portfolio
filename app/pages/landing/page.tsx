@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  Linkedin,
-  Github,
-  Instagram,
-  Phone,
-  Mail,
-  FileText,
-} from "lucide-react";
 
 const Landing: React.FC = () => {
   return (

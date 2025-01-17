@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
           <Mail className="text-2xl text-white hover:text-gray-300" />
         </a>
         <a
-          href="/path/to/your-resume.pdf"
+          href="/resume/YechengWang-Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-lg"

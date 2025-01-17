@@ -6,6 +6,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
@@ -39,9 +40,9 @@ const config: Config = {
         ],
       },
       cursor: {
-        default: "url(public/images/icons8-select-30-black.png), default",
-        dark: "url(public/images/icons8-select-30-white.png), default",
-        pointer: "url(public/images/icons8-select-30-blue.png), pointer",
+        default: "url(/images/icons8-select-30-black.png), default",
+        dark: "url(/images/icons8-select-30-white.png), default",
+        pointer: "url(/images/icons8-select-30-blue.png), pointer",
       },
       colors: {
         background: "hsl(var(--background))",
@@ -93,6 +94,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("flowbite/plugin")],
 };
 export default config;
