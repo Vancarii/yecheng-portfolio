@@ -47,7 +47,7 @@
 
 // export default Projects;
 
-import ProjectCard from "/components/ui/project-card.tsx";
+import ProjectCard from "/components/project-card.tsx";
 
 const projects = [
   {
