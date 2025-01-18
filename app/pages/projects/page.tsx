@@ -87,6 +87,15 @@ const projects = [
     sourceUrl: "https://github.com/AdamBahramiSchool/BusinessBeacon",
   },
   {
+    title: "Tic-Tac-Toe Agent",
+    description:
+      "A Python script that uses the different pre-planning algorithms to play tic-tac-toe. Done as an assignment for CMPT310 at SFU.",
+    imageUrl: "/app-screenshots/tictactoe.png",
+    technologies: ["Python", "Git", "GitHub"],
+    demoUrl: "",
+    sourceUrl: "https://github.com/Vancarii/tic-tac-toe-agent",
+  },
+  {
     title: "Stario Music",
     description:
       "A flutter music application that focuses on helping artists monetize music with ads.",
@@ -103,6 +112,24 @@ const projects = [
     technologies: ["Dart", "Flutter", "Google Maps API", "Firebase", "Git"],
     demoUrl: "",
     sourceUrl: "https://github.com/Vancarii/MeetPup",
+  },
+  {
+    title: "Archer's Escape",
+    description:
+      "A 2D platformer game built with Python and Pygame. One of my first projects ever made as I began my coding journey.",
+    imageUrl: "/app-screenshots/archer1.png",
+    technologies: ["Python", "Pygame", "Git", "GitHub"],
+    demoUrl: "",
+    sourceUrl: "https://github.com/Vancarii/archers-escape",
+  },
+  {
+    title: "Self Driver - Colour Detection",
+    description:
+      "A Python script that detects colours of the map and directs the vehicle direction.",
+    imageUrl: "/app-screenshots/self-driver.png",
+    technologies: ["Python", "Pygame", "Git", "GitHub"],
+    demoUrl: "",
+    sourceUrl: "https://github.com/Vancarii/colour-detecting-driver",
   },
 ];
 
