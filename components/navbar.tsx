@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { LayoutGrid, X } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -10,8 +10,8 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = useCallback(() => {
-    setIsOpen(!isOpen);
-  }, []);
+    setIsOpen((prev) => !prev);
+  }, [isOpen]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
