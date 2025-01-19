@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { FileUser } from "lucide-react";
-import { ModeToggle } from "@/components/mode-toggle";
-import Link from "next/link";
 
 const Bottombar: React.FC = () => {
   const openResumeTab = () => {
