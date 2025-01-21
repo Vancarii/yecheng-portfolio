@@ -11,7 +11,7 @@ const Bottombar: React.FC = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50">
-      <div className="flex justify-between items-center p-8">
+      <div className="flex justify-between items-end p-8">
         <Button
           variant="ghost"
           size="icon"
@@ -20,6 +20,9 @@ const Bottombar: React.FC = () => {
         >
           <FileUser />
         </Button>
+        <h1 className="  text-sm text-slate-300">
+          &copy; 2023 Yecheng Wang. All Rights Reserved.
+        </h1>
       </div>
     </div>
   );
