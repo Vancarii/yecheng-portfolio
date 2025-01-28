@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Bottombar />
           <main>{children}</main>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
