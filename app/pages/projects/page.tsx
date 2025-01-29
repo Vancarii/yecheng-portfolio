@@ -99,16 +99,16 @@ const projects = [
     title: "Stario Music",
     description:
       "A flutter music application that focuses on helping artists monetize music with ads.",
-    imageUrl: "/app-screenshots/stario7.jpg",
+    imageUrl: "/app-screenshots/stario7.JPG",
     technologies: ["Dart", "Flutter", "Pub Dev", "Git", "GitHub"],
     demoUrl: "",
-    sourceUrl: "https://github.com/Vancarii/MeetPup",
+    sourceUrl: "https://github.com/Vancarii/stario",
   },
   {
     title: "MeetPup",
     description:
       "A flutter application that allows users to find dog parks and meet other dog owners.",
-    imageUrl: "/app-screenshots/meetpup7.jpg",
+    imageUrl: "/app-screenshots/meetpup7.JPG",
     technologies: ["Dart", "Flutter", "Google Maps API", "Firebase", "Git"],
     demoUrl: "",
     sourceUrl: "https://github.com/Vancarii/MeetPup",
