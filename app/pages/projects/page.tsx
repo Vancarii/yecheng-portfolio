@@ -57,7 +57,7 @@ const projects = [
     imageUrl: "/app-screenshots/whistlerBBT.png",
     technologies: ["HTML", "CSS", "GoDaddy"],
     demoUrl: "https://whistlerbubbletea.ca",
-    sourceUrl: "https://github.com/yourusername/task-manager",
+    sourceUrl: "https://github.com/Vancarii/whistlerbubbletea",
   },
   {
     title: "Molu Finance",
