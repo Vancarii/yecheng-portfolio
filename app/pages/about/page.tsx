@@ -1,6 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+
+interface InterestCard {
+  title: string;
+  // description: string;
+  imageUrl: string;
+}
 
 const About: React.FC = () => {
   const [spacerHeight, setSpacerHeight] = useState("50vh");
@@ -15,12 +22,47 @@ const About: React.FC = () => {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial height
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Define interest cards
+  const interestCards: InterestCard[] = [
+    {
+      title: "Mountain Biking",
+      // description: "",
+      imageUrl: "/images/moonbooter-hor.jpeg",
+    },
+    {
+      title: "girlfriend",
+      // description:
+      //   "Competed internationally across Asia, North America, and Oceania.",
+      imageUrl: "/images/babes.JPG",
+    },
+    {
+      title: "bobo",
+      // description: "Winter adventures in the mountains of Whistler and beyond.",
+      imageUrl: "/images/bobo.jpg",
+    },
+    {
+      title: "meme",
+      // description: "Winter adventures in the mountains of Whistler and beyond.",
+      imageUrl: "/images/meme-2.jpg",
+    },
+    {
+      title: "tennis",
+      // description: "Winter adventures in the mountains of Whistler and beyond.",
+      imageUrl: "/images/tennis.JPG",
+    },
+    {
+      title: "snowboard",
+      // description: "Winter adventures in the mountains of Whistler and beyond.",
+      imageUrl: "/images/snowboard.jpg",
+    },
+  ];
 
   return (
     <div className="relative flex flex-col items-center justify-start min-h-screen p-4">
@@ -59,25 +101,115 @@ const About: React.FC = () => {
       {/* body below the intro text and arrow */}
       <div className="min-h-screen w-full flex flex-col items-center">
         <h1 className="text-1xl font-mono text-center max-w-4xl mx-auto">
-          Born and raised in <strong>Port Moody, BC,</strong> I developed a deep
-          love for the outdoors, inspired by the lush landscapes around me. As a
-          child, I had the privilege of traveling extensively, playing tennis
-          competitively across Singapore, China, New Zealand, Indonesia,
-          Malaysia, Ontario, and the United States. These experiences shaped my
-          resilience, discipline, and adaptability. Eventually, I returned to BC
-          and settled down for university, where I discovered my passion for
-          Computing Science and technology.
+          Born in Singapore and raised in <strong>Port Moody, BC,</strong> I
+          developed a deep love for the outdoors, inspired by the lush
+          landscapes around me. As a child, I had the privilege of traveling
+          extensively, playing tennis competitively across Singapore, China, New
+          Zealand, Indonesia, Malaysia, Ontario, and the United States. These
+          experiences shaped my resilience, discipline, and adaptability.
+          Eventually, I returned to BC and settled down for university, where I
+          discovered my passion for Computing Science and technology.
         </h1>
         <h1 className="text-1xl font-mono text-center max-w-4xl mx-auto mt-4">
-          When I’m not coding or designing, you’ll find me exploring the great
-          outdoors. I’m passionate about mountain biking, tennis, camping,
+          When I'm not coding or designing, you'll find me exploring the great
+          outdoors. I'm passionate about mountain biking, tennis, camping,
           off-roading, bouldering, and snowboarding. These hobbies fuel my
           creativity and give me the balance to tackle challenges with a fresh
-          perspective. Whether it’s navigating trails or problem-solving in
+          perspective. Whether it's navigating trails or problem-solving in
           code, I thrive on pushing limits and embracing adventure.
         </h1>
+
+        {/* Interest Cards Section */}
+        <div className="mt-48 w-full max-w-6xl">
+          {/* <h2 className="text-2xl font-bold text-center mb-8">
+            Interests & Activities
+          </h2> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {interestCards.map((card, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={card.imageUrl}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                {/* <div className="p-4"> */}
+                {/* <h3 className="text-lg font-semibold mb-2">{card.title}</h3> */}
+                {/* <p className="text-sm">{card.description}</p> */}
+                {/* </div> */}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Skills Section */}
+        <div className="mt-48 w-full max-w-6xl">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[
+              "C",
+              "C++",
+              "Python",
+              "HTML/CSS",
+              "JavaScript",
+              "TypeScript",
+              "Swift",
+              "Dart",
+              "Git",
+              "GitHub",
+              "VS Code",
+              "PyCharm",
+              "Xcode",
+              "Jupyter Notebook",
+              "Android Studio",
+              "React",
+              "Node.js",
+              "Next.js",
+              "Tailwind CSS",
+              "Firebase",
+              "Flutter",
+              "SwiftUI",
+              "SQLite",
+              "OpenAI API",
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="p-3 text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:bg-white/15 transition-all duration-200"
+              >
+                {skill}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="mt-48 w-full max-w-6xl">
+          {/* <h2 className="text-2xl font-bold text-center mb-8">Education</h2> */}
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6">
+            <div className="flex flex-col md:flex-row justify-between">
+              <div>
+                <h3 className="text-xl font-semibold">
+                  Simon Fraser University
+                </h3>
+                <p className="text-lg">
+                  BSc. Computing Science, Minor in Cognitive Science
+                </p>
+              </div>
+              <p className="text-lg">2022 - Present</p>
+            </div>
+            <div className="mt-4">
+              <p>Honours Roll (Fall 2024)</p>
+            </div>
+          </div>
+        </div>
+
         {/* footer */}
-        <div className="mt-35vh"></div>
+        <div className="mt-20"></div>
       </div>
     </div>
   );
