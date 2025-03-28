@@ -5,7 +5,6 @@ import Image from "next/image";
 
 interface InterestCard {
   title: string;
-  // description: string;
   imageUrl: string;
 }
 
@@ -33,33 +32,26 @@ const About: React.FC = () => {
   const interestCards: InterestCard[] = [
     {
       title: "Mountain Biking",
-      // description: "",
       imageUrl: "/images/moonbooter-hor.jpeg",
     },
     {
       title: "girlfriend",
-      // description:
-      //   "Competed internationally across Asia, North America, and Oceania.",
       imageUrl: "/images/babes.JPG",
     },
     {
       title: "bobo",
-      // description: "Winter adventures in the mountains of Whistler and beyond.",
       imageUrl: "/images/bobo.jpg",
     },
     {
       title: "meme",
-      // description: "Winter adventures in the mountains of Whistler and beyond.",
       imageUrl: "/images/meme-2.jpg",
     },
     {
       title: "tennis",
-      // description: "Winter adventures in the mountains of Whistler and beyond.",
       imageUrl: "/images/tennis.JPG",
     },
     {
       title: "snowboard",
-      // description: "Winter adventures in the mountains of Whistler and beyond.",
       imageUrl: "/images/snowboard.jpg",
     },
   ];
@@ -111,12 +103,13 @@ const About: React.FC = () => {
           discovered my passion for Computing Science and technology.
         </h1>
         <h1 className="text-1xl font-mono text-center max-w-4xl mx-auto mt-4">
-          When I'm not coding or designing, you'll find me exploring the great
-          outdoors. I'm passionate about mountain biking, tennis, camping,
-          off-roading, bouldering, and snowboarding. These hobbies fuel my
-          creativity and give me the balance to tackle challenges with a fresh
-          perspective. Whether it's navigating trails or problem-solving in
-          code, I thrive on pushing limits and embracing adventure.
+          When I&apos;m not coding or designing, you&apos;ll find me exploring
+          the great outdoors. I&apos;m passionate about mountain biking, tennis,
+          camping, off-roading, bouldering, and snowboarding. These hobbies fuel
+          my creativity and give me the balance to tackle challenges with a
+          fresh perspective. Whether it&apos;s navigating trails or
+          problem-solving in code, I thrive on pushing limits and embracing
+          adventure.
         </h1>
 
         {/* Interest Cards Section */}
