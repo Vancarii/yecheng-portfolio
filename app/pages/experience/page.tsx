@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Building2, ArrowRight } from "lucide-react";
+import { Building2 } from "lucide-react";
 import Image from "next/image";
 
 const experiences = [
