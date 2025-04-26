@@ -29,7 +29,7 @@ export default function ProjectCard({
   sourceUrl,
 }: ProjectCardProps) {
   return (
-    <Card className="w-full max-w-sm overflow-hidden p-4 bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-lg">
+    <Card className="w-full max-w-sm overflow-hidden p-4 bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-lg hover:bg-white/15 transition-all duration-300 group z-10">
       <div className="relative h-48 w-full">
         <Image
           src={imageUrl || "/placeholder.svg"}
@@ -62,12 +62,14 @@ export default function ProjectCard({
             </a>
           </Button>
         )}
-        <Button variant="outline" asChild>
-          <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-            <Github className="mr-2 h-4 w-4" />
-            Source Code
-          </a>
-        </Button>
+        {sourceUrl && (
+          <Button variant="outline" asChild>
+            <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4" />
+              Source Code
+            </a>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );

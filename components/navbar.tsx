@@ -79,6 +79,17 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
+              <Link href="/pages/experience">
+                <Button
+                  variant="outline"
+                  onClick={toggleMenu}
+                  className="p-6 text-xl bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-lg"
+                >
+                  Experience
+                </Button>
+              </Link>
+            </li>
+            <li>
               <Link href="/pages/projects">
                 <Button
                   variant="outline"
