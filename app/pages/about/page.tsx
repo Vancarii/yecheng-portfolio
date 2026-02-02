@@ -196,7 +196,7 @@ const About: React.FC = () => {
               <p className="text-lg">2022 - Present</p>
             </div>
             <div className="mt-4">
-              <p>Dean's Honour Roll (Fall 2024, Spring 2025)</p>
+              <p>Dean&apos;s Honour Roll (Fall 2024, Spring 2025)</p>
             </div>
           </div>
         </div>
