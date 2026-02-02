@@ -4,6 +4,24 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Ultrasonic Robotic Arm - Research Assistant",
+    description:
+      "Research project focused on developing a ultrasonic speaker attached to a robotic arm controlled by user hand gestures.",
+    imageUrl: "/app-screenshots/tangentlab.png",
+    technologies: ["Python", "C", "UDP", "Git", "ROS"],
+    demoUrl: "https://tangent.cs.sfu.ca",
+    sourceUrl: "",
+  },
+  {
+    title: "Sotera - Safety System",
+    description:
+      "A web application that tracks user trip information and provides emergency alerts.",
+    imageUrl: "/app-screenshots/Sotera-topo.png",
+    technologies: ["HTML/CSS", "Supabase", "Cron", "Firebase", "Firestore"],
+    demoUrl: "https://sotera.ca",
+    sourceUrl: "",
+  },
+  {
     title: "Fib Clock",
     description:
       "A simple mobile world clock application with an animated light and dark theme.",

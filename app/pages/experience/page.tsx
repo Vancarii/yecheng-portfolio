@@ -5,11 +5,12 @@ import Image from "next/image";
 
 const experiences = [
   {
-    title: "Mobile Application Developer Intern",
-    company: "Biointeractive Technologies Inc. (Tenzr Health)",
-    duration: "May 2025 - Present",
-    description: "",
-    logo: "/company-logos/tenzr.png",
+    title: "Mobile Application Developer Co-op",
+    company: "Tenzr Health",
+    duration: "May 2025 - Dec 2025",
+    description:
+      "Developed and maintained the .NET MAUI Mobile Application for client Home Exercise Programs. Collaborating with cross-functional teams to design user-friendly interfaces and implement new features.",
+    logo: "/company-logos/tenzrhealth.png",
   },
   {
     title: "AI Coding Instructor",

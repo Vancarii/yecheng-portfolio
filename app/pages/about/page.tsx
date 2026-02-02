@@ -15,7 +15,7 @@ const About: React.FC = () => {
     const handleResize = () => {
       const newHeight = Math.min(
         window.innerHeight / 3,
-        (50 * window.innerHeight) / 100
+        (50 * window.innerHeight) / 100,
       );
       setSpacerHeight(`${newHeight}px`);
     };
@@ -153,22 +153,22 @@ const About: React.FC = () => {
               "TypeScript",
               "Swift",
               "Dart",
+              ".NET MAUI",
               "Git",
               "GitHub",
               "VS Code",
-              "PyCharm",
               "Xcode",
               "Jupyter Notebook",
-              "Android Studio",
               "React",
               "Node.js",
-              "Next.js",
               "Tailwind CSS",
               "Firebase",
               "Flutter",
               "SwiftUI",
               "SQLite",
-              "OpenAI API",
+              "Docker",
+              "Postman",
+              "Figma",
             ].map((skill, index) => (
               <div
                 key={index}
@@ -190,13 +190,13 @@ const About: React.FC = () => {
                   Simon Fraser University
                 </h3>
                 <p className="text-lg">
-                  BSc. Computing Science, Minor in Cognitive Science
+                  BSc Computing Science, Minor in Cognitive Science
                 </p>
               </div>
               <p className="text-lg">2022 - Present</p>
             </div>
             <div className="mt-4">
-              <p>Honours Roll (Fall 2024)</p>
+              <p>Dean's Honour Roll (Fall 2024, Spring 2025)</p>
             </div>
           </div>
         </div>
