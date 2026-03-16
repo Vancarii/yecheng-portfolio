@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 import Navbar from "@/components/navbar";
 import Bottombar from "@/components/bottombar";
+import SnowEffect from "@/components/snow-effect";
 
 export const metadata: Metadata = {
   title: "Yecheng Wang",
@@ -25,6 +26,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >
+          <SnowEffect />
           <Navbar />
           <Bottombar />
           <main className="overflow-x-hidden">{children}</main>
