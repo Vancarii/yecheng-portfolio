@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -88,13 +94,29 @@ button {
 
   body {
     @apply bg-background text-foreground;
+    position: relative;
+    /* smooth color transitions for text/ui on theme toggle */
+    transition: color 0.6s ease;
+  }
+
+  /* Dark mode background image (trees2.jpg) — always underneath */
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
     background-image: url("../public/images/trees2.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
   }
 
-  /* For the border effect around the viewport*/
+  /* Light mode background image (trees_snow.png) — fades in on top */
   body::before {
     content: "";
     position: fixed;
@@ -102,9 +124,40 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 20px solid rgba(141, 141, 141, 0.455);
-    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    background-image: url("../public/images/trees_snow.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 0.8s ease;
     pointer-events: none;
+  }
+
+  /* In dark mode, hide the snow image so the dark one shows through */
+  .dark body::before {
+    opacity: 0;
+  }
+
+  /* Decorative border frame — needs its own element now, use a wrapper */
+  /* We re-use the html::before for the border */
+  html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 8px solid rgba(141, 141, 141, 0.455);
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  @media (min-width: 768px) {
+    html::before {
+      border: 20px solid rgba(141, 141, 141, 0.455);
+      box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+    }
   }
 
   .mt-35vh {
@@ -115,3 +168,4 @@ button {
     cursor: url(/images/icons8-select-30-white.png), default;
   }
 }
+

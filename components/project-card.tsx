@@ -40,7 +40,7 @@ export default function ProjectCard({
       </div>
       <CardHeader>
         <CardTitle className=" text-xl font-bold">{title}</CardTitle>
-        <CardDescription className=" text-slate-50">
+        <CardDescription className="text-foreground/80">
           {description}
         </CardDescription>
       </CardHeader>

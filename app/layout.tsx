@@ -19,16 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`antialiased overflow-x-hidden`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
         >
           <Navbar />
           <Bottombar />
-          <main>{children}</main>
+          <main className="overflow-x-hidden">{children}</main>
         </ThemeProvider>
         <Analytics />
       </body>

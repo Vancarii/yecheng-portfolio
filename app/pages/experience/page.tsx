@@ -5,6 +5,13 @@ import Image from "next/image";
 
 const experiences = [
   {
+    title: "Research Assistant",
+    company: "Simon Fraser University",
+    duration: "Jan 2026 - April 2026",
+    description: "Researching user interactions with a gesture and voice controlled supersonic robot arm",
+    logo: "/company-logos/sfu.jpg",
+  },
+  {
     title: "Mobile Application Developer Co-op",
     company: "Tenzr Health",
     duration: "May 2025 - Dec 2025",
@@ -40,7 +47,7 @@ const experiences = [
 
 export default function ExperiencesPage() {
   return (
-    <div className="relative flex flex-col items-center justify-start min-h-screen p-4 md:p-8">
+    <div className="relative flex flex-col items-center justify-start min-h-screen p-4 md:p-8 overflow-x-hidden">
       <div className="mt-24 w-full flex flex-col items-center">
         <motion.h1
           className="text-3xl md:text-4xl font-bold font-mono text-center mb-12"
@@ -73,7 +80,7 @@ export default function ExperiencesPage() {
 
               {/* Date on the opposite side of the card */}
               <div
-                className={`hidden md:flex absolute top-5 items-center gap-2 text-sm font-medium text-white/90 bg-white/10 backdrop-blur-sm py-1 px-3 rounded-full border border-white/20 z-20 ${
+                className={`hidden md:flex absolute top-5 items-center gap-2 text-sm font-medium text-foreground bg-white/10 backdrop-blur-sm py-1 px-3 rounded-full border border-white/20 z-20 ${
                   index % 2 === 0
                     ? "right-[calc(50%+20px)]"
                     : "left-[calc(50%+20px)]"
@@ -101,13 +108,13 @@ export default function ExperiencesPage() {
                 <h2 className="text-xl font-semibold flex items-center gap-2">
                   {experience.title}
                 </h2>
-                <h3 className="text-med text-white mt-1 flex items-center gap-2">
-                  <Building2 className="w-4 h-4 text-slate-200" />
+                <h3 className="text-med text-foreground mt-1 flex items-center gap-2">
+                  <Building2 className="w-4 h-4 text-foreground" />
                   {experience.company}
                 </h3>
 
                 {/* Mobile-only date display */}
-                <p className="text-sm text-white mt-1 flex items-center gap-2 md:hidden">
+                <p className="text-sm text-foreground mt-1 flex items-center gap-2 md:hidden">
                   {experience.duration}
                 </p>
 

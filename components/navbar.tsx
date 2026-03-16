@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
-      <div className="flex justify-between items-center p-8">
+      <div className="flex justify-between items-center p-4 md:p-8">
         <Button
           variant="ghost"
           size="icon"
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
             variant="ghost"
             size="icon"
             onClick={toggleMenu}
-            className="absolute top-8 left-8 p-4 bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-lg"
+            className="absolute top-4 left-4 md:top-8 md:left-8 p-4 bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-lg"
           >
             <X />
           </Button>
