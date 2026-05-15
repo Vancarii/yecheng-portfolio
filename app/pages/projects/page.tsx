@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Ultrasonic Robotic Arm - Research Assistant",
+    title: "H(arm)onic: Ultrasonic Robotic Arm",
     description:
       "Research project focused on developing a ultrasonic speaker attached to a robotic arm controlled by user hand gestures.",
     imageUrl: "/app-screenshots/tangentlab.png",
-    technologies: ["Python", "C", "UDP", "Git", "ROS"],
+    technologies: ["Python", "C", "Git", "ROS", "Whisper API", "OLLama AI"],
     demoUrl: "https://tangent.cs.sfu.ca",
     sourceUrl: "",
   },

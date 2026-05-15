@@ -5,10 +5,19 @@ import Image from "next/image";
 
 const experiences = [
   {
+    title: "iOS Engineer Co-op",
+    company: "MetaOptima Technology Inc.",
+    duration: "May 2026 - Current",
+    description:
+      "Developed features and bug fixes for the OptimaScan iOS application using Swift and SwiftUI.",
+    logo: "/company-logos/metaoptima.png",
+  },
+  {
     title: "Research Assistant",
     company: "Simon Fraser University",
-    duration: "Jan 2026 - April 2026",
-    description: "Researching user interactions with a gesture and voice controlled supersonic robot arm",
+    duration: "Jan 2026 - Current",
+    description:
+      "Researching user interactions with a gesture and voice controlled supersonic robot arm",
     logo: "/company-logos/sfu.jpg",
   },
   {
